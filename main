@@ -1,0 +1,25 @@
+ #include<bits/stdc++.h>
+ 2 using namespace std;
+ 3 typedef long long ll;
+ 4 #define clr(a,val) memset(a,val,sizeof(a))
+ 5 #define fi first
+ 6 #define se second
+ 7 #define pb push_back
+ 8 const int INF=0x3f3f3f3f;
+ 9 int n,a[105],b[105];
+10 int main()
+11 {
+12     int n;
+13     scanf("%d",&n);
+14     for(int i=1;i<=n;i++) scanf("%d",&a[i]);
+15     sort(a+1,a+1+n);
+16     for(int i=1;i<=n;i++)
+17     {
+18         if(i&1)
+19         b[i/2+1]=a[i];
+20         else b[n-i/2+1]=a[i];
+21     }
+22     for(int i=1;i<=n;i++) printf("%d ",b[i]);
+23     printf("\n");
+24     return 0;
+25 }
